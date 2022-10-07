@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Leaflet css file-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
+     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+     crossorigin=""/>
+     <!--Leaflet javascript file-->
+     <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
+     integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
+     crossorigin=""></script> 
+    <title>COUNTY GOVERNMENT OF KAKAMEGA</title>
+
+    <style>
+        html, body{
+            height:100%;
+            padding:0;
+            margin:0;
+        }
+        #map{
+            padding:0px;
+            margin:15px;
+            height:85%;
+        }
+    </style>
+</head>
+<body>
+  
+    <h1 class = "title-row"><u>DIGITAL MAP</u></h1>
+    <h2 style = "text-align: left-side;"><i>Welcome!Navigate Safely<i></h2>
+    
+    <div id="map", style="height: 600px"></div>
+
+    <style>
+        .title-row:hover{
+            color:blue;
+        }
+        .title-row{
+            font:Calibri;
+            text-align: center;
+        }
+					
+		
+    </style>
+<script>
+    var map = L.map('map').setView([0.092104, 34.729877], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '@ OpenStreetMap'
+}).addTo(map);
+
+var marker = L.marker([0.092104, 34.729877]).addTo(map);
+marker.bindPopup("<b>Ananda703</b><br>Nyatsi Food Cafe.").openPopup();
+
+function onMapClick(e) {
+    alert("You clicked the map at " + e.latlng);
+}
+
+map.on('click', onMapClick);
+</script>
+<a href>gilbertananda703@gmail.com</a href>
+</body>
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="header-col">
+                <h4>Author</h4>
+                <ul>
+                    <li><a href="#">Ananda Gilbert</a></li>
+                    <li><a href="#">ENC222-0126/2019</a></li>
+                </ul>
+               </div> 
+           
+   <div class="header-col">
+    <h4>Editors/Contributor</h4>
+    <ul>
+        <li><a href="#">Ananda Gilbert</a></li>
+        <li><a href="#">Leaflet Tutorial</a></li>
+    </ul>
+   </div> 
+   <div class="header-col">
+    <h4>Periphery Information</h4>
+    <ul>
+        <li><a href="#">Open Street maps</a></li>
+        
+    </ul>
+   </div> 
+   <style>
+    @import url('https://fonts.googleapis.com/css2?family=ESRI Surveyor:ital,wght@0,300;0,400;0,600;1,600&display=swap');
+    body{
+        line-height: 1.0;
+        #font-family: 'ESRI Surveyor', 'Jokerman';
+    }
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    .row{
+        display flex;
+        flex-wrap: wrap;
+    }
+    ul{
+        list-style: none;
+    }
+    .header{
+        background-color: light gray;
+        padding: 20px 0;
+    }
+    .header-col{
+        width: 10%;
+        padding: 4px;
+    }
+    .header-col h4{
+        font-size: 18px;
+        color: blue;
+        text-transform: capitalize;
+        margin-bottom: 10px;
+        font-weight: 300;
+        position: relative;
+    }
+    .header-col h4::before{
+        content: '';
+        position: relative;
+        left: 0;
+        bottom: 10px;
+        background-color: #e91ee63;
+        height: 2px;
+        box-sizing:border-box;
+        width:50px;
+    }
+    .header-col ul li a{
+        font-size: 12px;
+        text-transform: capitalize;
+        color:black;
+        text-decoration: none;
+        font-weight: 300;
+        color:black;
+        transition: all o.5s ease;
+    }
+    
+    
+   
+   </style>
+
+</header>
+</html>
